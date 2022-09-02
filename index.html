@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/b7df5782e3.js" crossorigin="anonymous"></script>
+    <title>Carga de turnos</title>
+  </head>
+  <body>
+    <div id="carga-turnos" class="carga-turnos">
+    <div class="titulo">
+      <h1>Cargá tu turno</h1>
+      <p>Completá los datos para cargar tu turno</p>
+    </div>
+    
+      <form id="form" class="form-general" novalidate>
+          <div class="form-inputs-arriba">
+            <div class="form-field">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" />
+              <small id="smallNombre" class="error"></small></small>
+            </div>
+            <div class="form-field">
+              <label for="apellido">Apellido</label>
+              <input type="text" id="apellido" name="apellido" />
+              <small id="smallApellido" class="error"></small>
+            </div>
+            <div class="form-field">
+              <label for="date">Fecha</label>
+              <input type="date" id="date" name="date" />
+              <small></small>
+            </div>
+            <div class="form-field">
+              <label for="hour">Hora</label>
+              <input
+                type="time"
+                id="hour"
+                name="hour"
+                min="08:00"
+                max="19:00"
+                value="08:00"
+                step="1800"
+              />
+              <small></small>
+            </div>
+            <div class="form-field">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" />
+              <small id="smallCorreo" class="error"></small>
+            </div>
+            <div class="form-field">
+              <label for="phone">Teléfono</label>
+              <input type="tel" id="phone" name="phone" />
+              <small id="smallPhone" class="error"></small>
+            </div>
+          </div>
+          <div class="form-inputs-medio">
+            <div class="form-radio">
+              <p>¿Cantidad de personas?</p>
+              <div class="form-field opciones">
+                <label for="less5">
+                  <input
+                    type="radio"
+                    id="less5"
+                    name="quantity"
+                    value="menos5"
+                    checked
+                  />
+                  Menos de 5</label
+                >
+
+                <label for="between510">
+                  <input
+                    type="radio"
+                    id="between510"
+                    name="quantity"
+                    value="510"
+                  />
+                  Entre 5 y 10</label
+                >
+
+                <label for="more10">
+                  <input
+                    type="radio"
+                    id="more10"
+                    name="quantity"
+                    value="mas10"
+                  />
+                  Más de 10</label
+                >
+              </div>
+            </div>
+              <div class="form-checkbox">
+                <p>Herramientas extras</p>
+                <div class="form-field opciones">
+                  <label for="pc">
+                    <input
+                      type="checkbox"
+                      id="pc"
+                      name="pc"
+                      value="PC"
+                      checked
+                    />
+                    Computadora</label
+                  >
+
+                  <label for="camara">
+                    <input
+                      type="checkbox"
+                      id="camara"
+                      name="camara"
+                      value="Cámara"
+                    />
+                    Cámara</label
+                  >
+
+                  <label for="speakers">
+                    <input
+                      type="checkbox"
+                      id="speakers"
+                      name="speakers"
+                      value="Parlantes"
+                    />
+                    Parlantes</label
+                  >
+
+                  <label for="proyector">
+                    <input
+                      type="checkbox"
+                      id="proyector"
+                      name="proyector"
+                      value="Proyector"
+                    />
+                    Proyector</label
+                  >
+
+                  <label for="sala-privada">
+                    <input
+                      type="checkbox"
+                      id="sala-privada"
+                      name="sala-privada"
+                      value="Sala privada"
+                    />
+                    Sala privada</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="form-inputs-abajo">
+              <div class="form-field form-cliente">
+                <label for="mensaje" class="mensaje"
+                  >¿Cómo se enteró el cliente de nosotros?<span
+                    >Opcional</span
+                  ></label
+                >
+                <input type="text" id="mensaje" name="mensaje" class="mensaje" />
+                <div class="caja-boton">
+                <button class="enviar" type="submit">Enviar</button>
+                
+                 </div>
+              </div>
+            </div>
+          </div>
+        
+      </form>
+    </div>
+<!-- 
+    <button class="reseteo" id="reseteo">Resetear</button> -->
+    
+    <div class="muestra-turnos" id="muestra-turnos">
+        
+
+        
+    </div>
+
+    
+    <script src="utils.js"></script>
+    <script src="index.js"></script>
+    <script src="validation.js"></script>
+  </body>
+</html>
+
+
+<!-- <div class="carta card${setCardBackground(quantity)}">
+    <div class="card-left">
+        <h2 class="card-title">
+            Turno n°${id} - ${name} ${lastName}
+        </h2>
+        <p class="card-qty">${quantity}</p>
+        <p class="card-extras">${extras}</p>
+        <div class="tags">
+            <span class="card-hour ${setTimeBackground(quantity)}">${time}</span>
+            <span class="card-date ${setDateBackground(quantity)}">${date}</span>
+        </div>
+    </div>
+    <div class="card-right">
+        <div class="contacto">
+            <i></i>
+            <i></i>
+        </div>
+        <img src="${setCardImage(quantity)}" alt="" class="${setCardImageClass(quantity)}">
+    </div>
+     -->
+
+
+
+
